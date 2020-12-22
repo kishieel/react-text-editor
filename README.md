@@ -2,6 +2,7 @@
 
 > Simple and full customizable rich text editor in react powered by font awesome and bootstrap.
 
+![Podgląd edytora](https://tkisiel.pl/global/editor.png)
 
 ## Usage
 
