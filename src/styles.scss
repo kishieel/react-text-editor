@@ -1,0 +1,122 @@
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+.editor {
+    @extend .form-control;
+
+    height: unset !important;
+    padding: 0;
+}
+
+.editor-toolbar {
+    @extend .py-1;
+    //display: flex;
+    //justify-content: space-between;
+    background: $gray-200;
+
+}
+
+.editor-toolbar-group {
+    @extend .mr-3;
+    display: inline-block;
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+
+    & > li {
+        display: inline-block;
+    }
+}
+
+.editor-toolbar-select {
+    display: inline-block;
+    padding: 1px 15px 1px 5px;
+    border: 1px solid rgba(0,0,0,0.25);
+    border-radius: 3px;
+    box-sizing: border-box;
+    background: white;
+
+    &:first-child {
+        margin-left: .5rem;
+    }
+}
+
+.editor-toolbar-button {
+    background: none;
+    border: none;
+    margin: 3px;
+    color: inherit;
+
+    &:hover {
+        background: transparentize( $primary, 0.9 );
+    }
+}
+
+.editor-toolbar-grid {
+    position: absolute;
+    background: $white;
+    padding: 3px;
+    border: 1px solid rgba(0, 0, 0, .2);
+
+    visibility: hidden;
+    opacity: 0;
+
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+
+    ul {
+        display: grid;
+        grid-gap: 3px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: block;
+            box-sizing: border-box;
+            line-height: 1 !important;
+
+            button {
+                width: 15px;
+                height: 15px;
+                border: 1px solid rgba(0,0,0, 0.15);
+            }
+        }
+    }
+}
+
+.editor-toolbar-table-grid {
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 2px !important;
+
+    li:hover {
+        button {
+            background: transparentize($primary, 0.5) !important;
+        }
+    }
+}
+
+.editor-toolbar-palette-grid {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.editor-area {
+    outline: none;
+    display: block;
+    height: 300px;
+    border: 0;
+    resize: vertical;
+    overflow: auto;
+    padding: $input-btn-padding-y $input-btn-padding-x;
+
+    sub {
+        vertical-align: sub;
+    }
+
+    sup {
+        vertical-align: super;
+    }
+}
