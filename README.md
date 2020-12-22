@@ -1,4 +1,4 @@
-# react-text-editor
+# React Text Editor
 
 > Simple and full customizable rich text editor in react powered by font awesome and bootstrap.
 
